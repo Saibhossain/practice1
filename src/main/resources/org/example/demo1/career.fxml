@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="802.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo1.Career">
+   <children>
+      <MenuBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="29.0" prefWidth="826.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Satting">
+               <items>
+                  <RadioMenuItem mnemonicParsing="false" text="Night mode" />
+                  <MenuItem mnemonicParsing="false" text="Close" />
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Apply">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Profile">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Close" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Window">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+         <effect>
+            <Blend />
+         </effect>
+      </MenuBar>
+      <ScrollPane fx:id="scrollPane" fitToWidth="true" hbarPolicy="NEVER" layoutY="30.0" prefHeight="704.0" prefWidth="826.0">
+         <content>
+            <VBox fx:id="vbox" alignment="TOP_CENTER" prefHeight="1800.0" prefWidth="826.0" spacing="10.0">
+               <children>
+                  <Label fx:id="guide" text="Career Guidance for Your Future" textFill="#0c0539">
+                     <font>
+                        <Font name="System Bold Italic" size="56.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="me" alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="794.0" text="Unlock your potential and find the best career path for your skills">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="15.0" top="-19.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="me1" contentDisplay="RIGHT" prefHeight="27.0" prefWidth="789.0" text="Our career page helps you discover opportunities that match your  ">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="me2" alignment="CENTER" contentDisplay="RIGHT" prefHeight="23.0" prefWidth="794.0" text="skills, interests, and goals.   Let’s build your future together !!">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="15.0" top="-7.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="Whatjob" prefHeight="26.0" prefWidth="745.0" text="What job role interests you ?">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="35.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="Whatjob1" prefHeight="26.0" prefWidth="745.0" text="PIck one below, and we will suggest you a learning path to get you started.  :)">
+                     <VBox.margin>
+                        <Insets left="40.0" top="-8.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="53.0" prefWidth="809.0" spacing="20.0">
+                     <children>
+                        <Button fx:id="trans1" mnemonicParsing="false" prefHeight="54.0" prefWidth="155.0" text="Data Analyst">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="trans2" mnemonicParsing="false" prefHeight="53.0" prefWidth="164.0" text="Data Scientist">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="trans3" mnemonicParsing="false" prefHeight="53.0" prefWidth="160.0" text="Data Engineer">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="53.0" prefWidth="809.0" spacing="20.0">
+                     <children>
+                        <Button fx:id="trans11" mnemonicParsing="false" prefHeight="53.0" prefWidth="281.0" text="Cybersecurity Professional">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="trans21" mnemonicParsing="false" prefHeight="53.0" prefWidth="228.0" text="Full Stack Developer">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="trans31" mnemonicParsing="false" prefHeight="53.0" prefWidth="195.0" text="DevOps Engineer">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <ToolBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="63.0" prefWidth="832.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <items>
+            <Button alignment="CENTER" lineSpacing="3.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#goExplorePage" prefHeight="52.0" prefWidth="200.0" text="Explore">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="39.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../bell.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#goCareerPage" prefHeight="51.0" prefWidth="200.0" text="Career">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../discussion.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#goSearchPage" prefHeight="51.0" prefWidth="199.0" text="Search">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../search.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#goProfilePage" prefHeight="51.0" prefWidth="200.0" text="Profile">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../profile.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </items>
+      </ToolBar>
+   </children>
+</AnchorPane>
