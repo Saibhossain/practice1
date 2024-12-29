@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="766.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo1.UniDetails">
+   <children>
+      <MenuBar layoutX="10.0" layoutY="10.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="28.0" prefWidth="830.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Satting">
+               <items>
+                  <RadioMenuItem mnemonicParsing="false" text="Night Mode" />
+                  <MenuItem mnemonicParsing="false" text="Close" />
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Apply">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Profile">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Close" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Window">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+         <effect>
+            <Blend />
+         </effect>
+      </MenuBar>
+      <ScrollPane fitToWidth="true" layoutY="38.0" prefHeight="661.0" prefWidth="830.0" vbarPolicy="NEVER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="38.0">
+         <content>
+            <VBox alignment="TOP_CENTER" prefHeight="765.0" prefWidth="824.0" spacing="10.0">
+               <children>
+                  <ImageView fitHeight="253.0" fitWidth="346.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Brac.jpg" />
+                     </image></ImageView>
+                  <TextArea fx:id="UniDetails" editable="false" prefHeight="183.0" prefWidth="764.0">
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </VBox.margin></TextArea>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <ToolBar layoutX="132.0" layoutY="678.0" prefHeight="63.0" prefWidth="752.0" AnchorPane.bottomAnchor="66.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <items>
+            <Button fx:id="Apply" mnemonicParsing="false" prefHeight="47.0" prefWidth="375.0" text="Apply Now">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="47.0" prefWidth="375.0" text="Add Wish ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+        </items>
+         <padding>
+            <Insets left="40.0" right="20.0" />
+         </padding>
+         <effect>
+            <Blend />
+         </effect>
+      </ToolBar>
+      <ToolBar layoutX="10.0" layoutY="736.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="63.0" prefWidth="852.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <items>
+            <Button alignment="CENTER" lineSpacing="3.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#goExplorePage" prefHeight="52.0" prefWidth="200.0" text="Explore">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="39.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../bell.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#goCareerPage" prefHeight="51.0" prefWidth="200.0" text="Career">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../discussion.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#goSearchPage" prefHeight="51.0" prefWidth="199.0" text="Search">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../search.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#goProfilePage" prefHeight="51.0" prefWidth="200.0" text="Profile">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../profile.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </items>
+      </ToolBar>
+      
+   </children>
+</AnchorPane>
