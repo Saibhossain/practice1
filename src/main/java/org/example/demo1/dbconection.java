@@ -8,9 +8,9 @@ import java.util.Scanner;
 
 public class dbconection {
     public static void main(String[] args) {
-        String url = "jdbc:mysql://localhost:3308/javaproject"; // Replace with your DB name
-        String username = "root"; // Replace with your DB username
-        String password = "";     // Replace with your DB password
+//        String url = "jdbc:mysql://localhost:3308/javaproject"; // Replace with your DB name
+//        String username = "root"; // Replace with your DB username
+//        String password = "";     // Replace with your DB password
 
         try (Connection connection = databaseConnection.connect()){
             System.out.println("Connected to the database successfully!");

@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.LinearGradient;
@@ -27,6 +28,8 @@ public class Career {
 
     @FXML
     private VBox vbox;
+    @FXML
+    private TextArea iosDeveloper,FrontEndDeveloper,FulStackDeveloper,DigitalMarketer,blockchain,DevOpsEngineer,BackEndDeveloper,appDeveloper,itSpecialist,UiDesign,cyber,dataEng,DataScie,DataScie1,game,kg;
     @FXML
     private Label guide,me,me1,me2,Whatjob,Whatjob1;
     @FXML
@@ -48,7 +51,7 @@ public class Career {
         //trans.setStyle("-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: white;");
 
         // Add buttons to a list
-        List<Button> buttons = Arrays.asList(trans4,trans5,trans6,trans7,trans8,trans9,trans10,trans11,trans12,trans13,trans14,trans15,trans16);
+        List<Button> buttons = Arrays.asList(trans1,trans2,trans3,trans4,trans5,trans6,trans7,trans8,trans9,trans10,trans11,trans12,trans13,trans14,trans15,trans16);
         // Apply the style to each button
         for (Button button : buttons) {
             button.setStyle("-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #ff7f50, #1e90ff); -fx-text-fill: white;");
@@ -67,23 +70,84 @@ public class Career {
         me.setTextFill(gradient);
         me1.setTextFill(gradient);
         me2.setTextFill(gradient);
-        trans1.setTextFill(gradient);
-        trans2.setTextFill(gradient);
-        trans3.setTextFill(gradient);
+//        trans1.setTextFill(gradient);
+//        trans2.setTextFill(gradient);
+//        trans3.setTextFill(gradient);
         //trans3.setStyle("-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #ff7f50, #1e90ff); -fx-text-fill: white;");
     }
 
-    //Scrolls to the specified label.
-    private void scrollTo(Label label) {
+    //Scrolls to the specified text.
+    private void scrollTo(TextArea label) {
         double layoutY = label.getLayoutY();                                                    // Get the Y-coordinate of the label relative to the VBox
         double scrollHeight = vbox.getHeight() - scrollPane.getViewportBounds().getHeight();   // Calculate the scroll position
         double scrollPosition = layoutY / scrollHeight;
         scrollPane.setVvalue(scrollPosition);                                                   // Scroll to the target position
     }
-//    @FXML
-//    private void scrollToLabel2() {
-//        scrollTo(Whatjob12);
-//    }
+    @FXML
+    private void scrollToIosDeveloper() {
+        scrollTo(iosDeveloper);
+    }
+    @FXML
+    private void scrollToFrontEndDeveloper() {
+        scrollTo(FrontEndDeveloper);
+    }
+    @FXML
+    private void scrollToFulStackDeveloper() {
+        scrollTo(FulStackDeveloper);
+    }
+    @FXML
+    private void scrollToDigitalMarketer() {
+        scrollTo(DigitalMarketer);
+    }
+    @FXML
+    private void scrollToblockchain() {
+        scrollTo(blockchain);
+    }
+    @FXML
+    private void scrollToDevOpsEngineer() {
+        scrollTo(DevOpsEngineer);
+    }
+    @FXML
+    private void scrollToBackEndDeveloper() {
+        scrollTo(BackEndDeveloper);
+    }
+    @FXML
+    private void scrollToappDeveloper() {
+        scrollTo(appDeveloper);
+    }
+    @FXML
+    private void scrollToitSpecialist() {
+        scrollTo(itSpecialist);
+    }
+    @FXML
+    private void scrollToUiDesign() {
+        scrollTo(UiDesign);
+    }
+    @FXML
+    private void scrollTocyber() {
+        scrollTo(cyber);
+    }
+    @FXML
+    private void scrollTodataEng() {
+        scrollTo(dataEng);
+    }
+    @FXML
+    private void scrollToDataScie() {
+        scrollTo(DataScie);
+    }
+    @FXML
+    private void scrollToDataScie1() {
+        scrollTo(DataScie1);
+    }
+    @FXML
+    private void scrollTogame() {
+        scrollTo(game);
+    }
+    @FXML
+    private void scrollTokg() {
+        scrollTo(kg);
+    }
+
 
     @FXML
     void goProfilePage(ActionEvent event) {
@@ -121,6 +185,19 @@ public class Career {
             stage.show();
         } catch (IOException e) {
             System.out.println("Error loading NewLayout.fxml in goBack.");
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    void Help(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/demo1/chat/chatUI.fxml")); // Load layout.fxml to go back
+            Parent root = loader.load();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow(); // Get the stage and set the scene
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            System.out.println("Error loading chatUI.fxml in goBack.");
             e.printStackTrace();
         }
     }

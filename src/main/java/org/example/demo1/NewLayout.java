@@ -221,7 +221,9 @@ public class NewLayout {
         nameButton.setOnAction(event -> showUniversityDetails(university));
 
         // University Image (Placeholder)
-        ImageView imageView = new ImageView(new Image("Brac.jpg")); // Replace with actual URL or file path
+        String image = university.getimage();
+        System.out.print(image);
+        ImageView imageView = new ImageView(new Image(getClass().getResource("/Image/AIUB.png").toString())); // Replace with actual URL or file path
         imageView.setFitWidth(211);
         imageView.setFitHeight(159);
         imageView.setPreserveRatio(true);
