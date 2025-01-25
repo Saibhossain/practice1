@@ -7,7 +7,11 @@ module org.example.demo1 {
     requires java.desktop;
     requires fontawesomefx;
 
+    requires java.sql;
+
 
     opens org.example.demo1 to javafx.fxml;
+    opens org.example.demo1.chat to javafx.fxml;
     exports org.example.demo1;
+    exports org.example.demo1.chat;
 }

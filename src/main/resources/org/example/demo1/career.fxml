@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="802.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo1.Career">
+<AnchorPane prefHeight="771.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo1.Career">
    <children>
       <MenuBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="29.0" prefWidth="826.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
          <menus>
@@ -105,7 +105,7 @@
                         <Font size="12.0" />
                      </font>
                   </Label>
-                  <HBox prefHeight="53.0" prefWidth="809.0" spacing="20.0">
+                  <HBox prefHeight="34.0" prefWidth="790.0" spacing="20.0">
                      <children>
                         <Button fx:id="trans1" mnemonicParsing="false" prefHeight="54.0" prefWidth="155.0" text="Data Analyst">
                            <font>
@@ -127,19 +127,19 @@
                         <Insets left="20.0" />
                      </VBox.margin>
                   </HBox>
-                  <HBox prefHeight="53.0" prefWidth="809.0" spacing="20.0">
+                  <HBox prefHeight="31.0" prefWidth="790.0" spacing="20.0">
                      <children>
-                        <Button fx:id="trans11" mnemonicParsing="false" prefHeight="53.0" prefWidth="281.0" text="Cybersecurity Professional">
+                        <Button fx:id="trans4" mnemonicParsing="false" prefHeight="53.0" prefWidth="281.0" text="Cybersecurity Professional">
                            <font>
                               <Font size="22.0" />
                            </font>
                         </Button>
-                        <Button fx:id="trans21" mnemonicParsing="false" prefHeight="53.0" prefWidth="228.0" text="Full Stack Developer">
+                        <Button fx:id="trans5" mnemonicParsing="false" prefHeight="53.0" prefWidth="228.0" text="Full Stack Developer">
                            <font>
                               <Font size="22.0" />
                            </font>
                         </Button>
-                        <Button fx:id="trans31" mnemonicParsing="false" prefHeight="53.0" prefWidth="195.0" text="DevOps Engineer">
+                        <Button fx:id="trans6" mnemonicParsing="false" prefHeight="53.0" prefWidth="195.0" text="DevOps Engineer">
                            <font>
                               <Font size="22.0" />
                            </font>
@@ -148,6 +148,77 @@
                      <VBox.margin>
                         <Insets left="20.0" />
                      </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="31.0" prefWidth="790.0" spacing="20.0">
+                     <children>
+                        <Button fx:id="trans7" mnemonicParsing="false" prefHeight="43.0" prefWidth="147.0" text="UX Designer">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="trans8" mnemonicParsing="false" prefHeight="43.0" prefWidth="220.0" text="IT Support Specialist">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="trans9" mnemonicParsing="false" prefHeight="43.0" prefWidth="222.0" text="Front-End Developer">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="trans10" mnemonicParsing="false" prefHeight="43.0" prefWidth="133.0" text="Blockchain">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="31.0" prefWidth="790.0" spacing="20.0">
+                     <children>
+                        <Button fx:id="trans11" mnemonicParsing="false" prefHeight="43.0" prefWidth="281.0" text="Application Developer">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="trans12" mnemonicParsing="false" prefHeight="43.0" prefWidth="234.0" text="Back-End Developeer">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="trans13" mnemonicParsing="false" prefHeight="53.0" prefWidth="195.0" text="IOS Developer">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="31.0" prefWidth="790.0" spacing="20.0">
+                     <children>
+                        <Button fx:id="trans14" mnemonicParsing="false" prefHeight="43.0" prefWidth="176.0" text="Digital Marketer">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="trans15" mnemonicParsing="false" prefHeight="53.0" prefWidth="228.0" text="Full Stack Developer">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="trans16" mnemonicParsing="false" prefHeight="53.0" prefWidth="195.0" text="DevOps Engineer">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
                   </HBox>
                </children>
             </VBox>
@@ -167,7 +238,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button mnemonicParsing="false" onAction="#goCareerPage" prefHeight="51.0" prefWidth="200.0" text="Career">
+            <Button mnemonicParsing="false" prefHeight="51.0" prefWidth="200.0" text="Career">
                <graphic>
                   <ImageView fitHeight="36.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                      <image>

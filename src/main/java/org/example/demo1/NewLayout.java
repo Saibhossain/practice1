@@ -1,6 +1,5 @@
 package org.example.demo1;
 
-
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -98,7 +97,7 @@ public class NewLayout {
         e.printStackTrace();    }
     }
     @FXML
-    void seeMore(MouseEvent event) {
+    void seeMore(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("seemore.fxml")); // Load layout.fxml to go back
             Parent root = loader.load();
@@ -157,13 +156,27 @@ public class NewLayout {
         image.setDisable(true);
     }
     public void imgDisableTrue(ActionEvent event) {
-
         image.setVisible(true);
         System.out.println("image.setDisable(true);");
     }
+
     public void imgDisableFalse(ActionEvent event) {
         image.setVisible(false);
         System.out.println("image.setDisable(false);");
+
+    }
+    @FXML
+    public void goForChat(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/demo1/chat/chatUI.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            System.out.println("Error loading chatUI.fxml in goBack.");
+            e.printStackTrace();
+        }
     }
 
     public void uni_details(ActionEvent event) {
@@ -230,9 +243,9 @@ public class NewLayout {
         hbox.setSpacing(4);
 
         // Action buttons with icons
-        Button bellButton = createIconButton("bell.png", 24, 27, this::goBack);
+        Button bellButton = createIconButton("bell.png", 48, 31, this::goBack);
         Button callButton = createIconButton("call.png", 48, 31, this::goBack);
-        Button calendarButton = createIconButton("calender.png", 48, 31, this::imgDisableFalse);
+        Button calendarButton = createIconButton("calender.png", 48, 31, this::imgDisableTrue);
         Button messageButton = createIconButton("message.jpg", 48, 31, this::imgDisableTrue);
 
 
@@ -277,10 +290,10 @@ public class NewLayout {
     private Button createIconButton(String imagePath, double width, double height, EventHandler<ActionEvent> action) {
         Button button = new Button();
         button.setPrefSize(width, height);
-        button.setStyle("-fx-background-color: transparent;");
+        button.setStyle("-fx-background-color: white;");
         ImageView icon = new ImageView(new Image(imagePath));
-        icon.setFitWidth(47);
-        icon.setFitHeight(31);
+        icon.setFitWidth(27);
+        icon.setFitHeight(24);
         icon.setPreserveRatio(true);
         button.setGraphic(icon);
         button.setOnAction(action);

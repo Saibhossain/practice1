@@ -1,14 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.example.demo1.Profile"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="771.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo1.Profile">
+   <children>
+      <MenuBar layoutX="10.0" layoutY="10.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="28.0" prefWidth="830.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Setting">
+               <items>
+                  <RadioMenuItem mnemonicParsing="false" text="Night Mode" />
+                  <MenuItem mnemonicParsing="false" text="Close" />
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Apply">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Profile">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Close" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Window">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+         <effect>
+            <Blend />
+         </effect>
+      </MenuBar>
+      <BorderPane layoutX="1.0" layoutY="30.0" prefHeight="676.0" prefWidth="842.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <top>
+            <Circle fill="DODGERBLUE" radius="93.0" stroke="BLACK" strokeType="INSIDE" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="6.0" top="6.0" />
+               </BorderPane.margin>
+            </Circle>
+         </top>
+         <left>
+            <VBox alignment="TOP_CENTER" prefHeight="427.0" prefWidth="188.0" spacing="20.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField promptText="Enter your name" />
+                  <TextField promptText="Father name" />
+                  <TextField promptText="Mother name" />
+                  <TextField promptText="Ssc Result" />
+                  <TextField promptText="Hsc result" />
+                  <TextField promptText="Number" />
+                  <TextField promptText="Gordian number" />
+                  <TextField promptText="Address" />
+                  <TextField promptText="marital status" />
+                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="162.0" text="Save" />
+               </children>
+               <BorderPane.margin>
+                  <Insets left="3.0" />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+         <center>
+            <TextArea editable="false" prefHeight="420.0" prefWidth="546.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets left="5.0" />
+               </BorderPane.margin>
+            </TextArea>
+         </center>
+         <right>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" text="Edit" />
+               </children>
+            </VBox>
+         </right>
+         <bottom>
+            <HBox prefHeight="93.0" prefWidth="842.0" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+      <ToolBar layoutX="10.0" layoutY="736.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="63.0" prefWidth="852.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <items>
+            <Button alignment="CENTER" lineSpacing="3.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#goExplorePage" prefHeight="52.0" prefWidth="200.0" text="Explore">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="39.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../bell.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#goCareerPage" prefHeight="51.0" prefWidth="200.0" text="Career">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../discussion.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#goSearchPage" prefHeight="51.0" prefWidth="199.0" text="Search">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../search.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="51.0" prefWidth="200.0" text="Profile">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../profile.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </items>
+      </ToolBar>
+   </children>
 </AnchorPane>

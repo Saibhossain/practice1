@@ -30,7 +30,7 @@ public class Career {
     @FXML
     private Label guide,me,me1,me2,Whatjob,Whatjob1;
     @FXML
-    private Button trans1,trans2,trans3,trans11,trans21,trans31;
+    private Button trans1,trans2,trans3,trans4,trans5,trans6,trans7,trans8,trans9,trans10,trans11,trans12,trans13,trans14,trans15,trans16;
 
     @FXML
     void initialize() {
@@ -48,7 +48,7 @@ public class Career {
         //trans.setStyle("-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: white;");
 
         // Add buttons to a list
-        List<Button> buttons = Arrays.asList(trans1, trans2, trans3,trans11, trans21, trans31);
+        List<Button> buttons = Arrays.asList(trans4,trans5,trans6,trans7,trans8,trans9,trans10,trans11,trans12,trans13,trans14,trans15,trans16);
         // Apply the style to each button
         for (Button button : buttons) {
             button.setStyle("-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #ff7f50, #1e90ff); -fx-text-fill: white;");
@@ -67,9 +67,9 @@ public class Career {
         me.setTextFill(gradient);
         me1.setTextFill(gradient);
         me2.setTextFill(gradient);
-        //trans1.setTextFill(gradient);
-        //trans2.setTextFill(gradient);
-        //trans3.setTextFill(gradient);
+        trans1.setTextFill(gradient);
+        trans2.setTextFill(gradient);
+        trans3.setTextFill(gradient);
         //trans3.setStyle("-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #ff7f50, #1e90ff); -fx-text-fill: white;");
     }
 
@@ -86,23 +86,13 @@ public class Career {
 //    }
 
     @FXML
-    void goCareerPage(ActionEvent event) {
-
-    }
-    @FXML
     void goProfilePage(ActionEvent event) {
         try {
-            System.out.println("in profilePage");
             FXMLLoader loader = new FXMLLoader(getClass().getResource("profile.fxml")); // Load layout.fxml to go back
             Parent root = loader.load();
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow(); // Get the stage and set the scene
-            if (stage == null) {
-                System.out.println("Stage is null in profile.fxml");
-                return;
-            }
             stage.setScene(new Scene(root));
             stage.show();
-            System.out.println("Transitioned back to profilepage");
         } catch (IOException e) {
             System.out.println("Error loading profile.fxml in goBack.");
             e.printStackTrace();
@@ -111,17 +101,11 @@ public class Career {
     @FXML
     void goSearchPage(ActionEvent event) {
         try {
-            System.out.println("in searchPage");
             FXMLLoader loader = new FXMLLoader(getClass().getResource("search.fxml")); // Load layout.fxml to go back
             Parent root = loader.load();
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow(); // Get the stage and set the scene
-            if (stage == null) {
-                System.out.println("Stage is null in search.fxml");
-                return;
-            }
             stage.setScene(new Scene(root));
             stage.show();
-            System.out.println("Transitioned back to Search");
         } catch (IOException e) {
             System.out.println("Error loading search.fxml in goBack.");
             e.printStackTrace();
@@ -130,17 +114,11 @@ public class Career {
     @FXML
     void goExplorePage(ActionEvent event) {
         try {
-            System.out.println("in NewLayout.fxml--Explore ");
             FXMLLoader loader = new FXMLLoader(getClass().getResource("NewLayout.fxml")); // Load layout.fxml to go back
             Parent root = loader.load();
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow(); // Get the stage and set the scene
-            if (stage == null) {
-                System.out.println("Stage is null in NewLayout.fxml--Explore");
-                return;
-            }
             stage.setScene(new Scene(root));
             stage.show();
-            System.out.println("Transitioned back to NewLayout.fxml");
         } catch (IOException e) {
             System.out.println("Error loading NewLayout.fxml in goBack.");
             e.printStackTrace();
